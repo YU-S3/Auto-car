@@ -41,15 +41,17 @@
     "incomplete_subject_score_seconds": 278,
     "incomplete_score_is_runtime_timeout": false,
     "omitted_components_allowed_with_penalty": true,
-    "effective_count_authority": "external infrared judge, not onboard software"
+    "effective_count_authority": "external infrared judge, not onboard software",
+    "scope": "Wenjie PPT profile; national profiles supplement separately"
   },
   "unresolved_execution_details": [
-    "Exact start/finish trigger",
-    "Weight-to-time conversion",
-    "Preloaded route permission",
-    "Encoder/IMU use boundary",
+    "Exact Wenjie start/finish trigger",
+    "Wenjie adoption scope of national-final 75 percent threshold",
+    "Wenjie local software-task arrangements",
+    "Actual track and departure direction",
     "Operational timeout",
-    "Precise final date"
+    "Precise final date",
+    "Physical board/component eligibility evidence"
   ],
   "source_snapshot": {
     "commit": "7abfdac0d0156576ba5186716a7c1e42992359ca",
@@ -67,6 +69,83 @@
   "deliverables": [
     "docs/architecture/system-architecture.md",
     "docs/adr/0001-tc264-shared-c-baseline.md",
-    "docs/assessment/2026-11-14-finish-readiness.md"
-  ]
+    "docs/assessment/2026-11-14-finish-readiness.md",
+    "docs/research/2026-11-14-national21-rule-baseline.md"
+  ],
+  "assessment_policy": "Retain explicit Wenjie three-subject format and supplement technical details using 21st national rules; keep national regional and national-final requirements separate.",
+  "subsequent_user_instruction": {
+    "date": "2026-11-14",
+    "reference": "21st national smart-car crazy-circuit rules",
+    "changes_scope": "Technical details now include national rules, Q&A and later process; not automatic cancellation of explicit Wenjie three-subject format."
+  },
+  "national_sources": [
+    {
+      "id": "N1",
+      "url": "https://blog.csdn.net/zhuoqingjoking97298/article/details/154598625",
+      "page_date": "2026-08-31",
+      "status": "author_body_read",
+      "relevant_sections": [
+        "Race category table",
+        "Sensors",
+        "Circuit boards"
+      ]
+    },
+    {
+      "id": "N2",
+      "url": "https://blog.csdn.net/zhuoqingjoking97298/article/details/154691219",
+      "page_date": "2026-05-29",
+      "status": "author_body_read",
+      "formula_asset": "docs/research/national21-score-formula.png"
+    },
+    {
+      "id": "N3",
+      "url": "https://blog.csdn.net/zhuoqingjoking97298/article/details/157686593",
+      "page_date": "2026-07-27",
+      "status": "author_body_read",
+      "relevant_sections": [
+        "July question 17: national final 75 percent",
+        "June questions 7 and 8: IMU permission",
+        "July questions 5 and 7: departure direction"
+      ]
+    },
+    {
+      "id": "N4",
+      "url": "https://blog.csdn.net/zhuoqingjoking97298/article/details/162473034",
+      "page_date": "2026-07-30",
+      "status": "author_body_read",
+      "relevant_sections": [
+        "Scoring table crazy-circuit row"
+      ]
+    }
+  ],
+  "national_profiles": {
+    "regional_later_process": {
+      "subjects": [
+        3
+      ],
+      "minimum_effective_components": 2,
+      "software_blind_task_incomplete_penalty_seconds": 10
+    },
+    "national_final_qa": {
+      "coverage_ratio_minimum": 0.75,
+      "integer_threshold_project_interpretation": "max(2, ceil(0.75*M))",
+      "scope": "national final only; not automatically confirmed Wenjie threshold"
+    }
+  },
+  "national_hardware": {
+    "mcu_family": "Infineon AURIX",
+    "allowed_imu_chips": [
+      "LSM6DSV16XTR",
+      "LSM6DSRTR"
+    ],
+    "seekfree_finished_imu_board_allowed_by_june_qa": true,
+    "rb_chip_model_direction_matches": true,
+    "commercial_learning_mainboard_and_motor_driver_eligibility": "not established under national self-designed-circuit requirements"
+  },
+  "national_weight_penalty": {
+    "includes_battery": true,
+    "unit": "g",
+    "expression": "floor(max(0, weight_g-100)/20*10)/10 seconds",
+    "source": "N1/N4"
+  }
 }
