@@ -5,6 +5,7 @@
 - [硬件型号与保守计算资源](docs/hardware-components.md)
 - [软件架构：源码、模块、接口与调度预算](docs/architecture/system-architecture.md)
 - [2026文杰杯完赛要求与当前差距评估](docs/assessment/2026-11-14-finish-readiness.md)
+- [当前软件是否达标：专项源码检查](docs/assessment/2026-11-14-software-compliance-audit.md)
 - [第21届疯狂电路组规则补充与适用范围](docs/research/2026-11-14-national21-rule-baseline.md)
 - [已下载的Soberup源码基线及模块选择](soberup/README.md)
 - [全部资料与实施计划](docs/README.md)

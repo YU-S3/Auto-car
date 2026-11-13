@@ -1,0 +1,269 @@
+{
+  "checked_on": "2026-11-14",
+  "workspace_commit_at_audit_start": "9c27dd9cf9743183029720051180416a78ccd2e1",
+  "upstream_commit": "7abfdac0d0156576ba5186716a7c1e42992359ca",
+  "verdict": "not_ready_for_this_vehicle; no real-world competition signoff",
+  "method": "targeted static call-chain and configuration review; not a full SDK audit",
+  "findings": [
+    {
+      "id": "SW01",
+      "priority": "P1",
+      "path": "soberup/upstream/code/initialize.c",
+      "line_matches": [
+        27
+      ],
+      "anchor": "imu660rc_init_main();",
+      "sha256": "b27949ec6cf613f76fcf9625295aac7a812aa3412e4e5c429179c86b1e14077b",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW02",
+      "priority": "P1",
+      "path": "soberup/upstream/code/route_config.h",
+      "line_matches": [
+        12
+      ],
+      "anchor": "#define ROUTE_STOP_FORK_PRELIM_FORWARD 54",
+      "sha256": "725fdd85ec5280f46ba7af94d6e2f37c24fe1c4a82e9c0788442bae83920bf34",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW03",
+      "priority": "P1",
+      "path": "soberup/upstream/user/cpu0_main.c",
+      "line_matches": [
+        67
+      ],
+      "anchor": "if(time_used >= 13",
+      "sha256": "3a648c01536deec99b7bfa7da8ddcbe7ad8cde5ed4562aeb896ac32e190a772e",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW04",
+      "priority": "P1",
+      "path": "soberup/upstream/libraries/zf_device/zf_device_mt9v03x.c",
+      "line_matches": [
+        243
+      ],
+      "anchor": "static void mt9v03x_vsync_handler(void)",
+      "sha256": "d1205535d83739378f456e295731d3f4cc146adfa2daba439a287d6a3d9e6a57",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW05",
+      "priority": "P1",
+      "path": "soberup/upstream/code/line.c",
+      "line_matches": [
+        39,
+        212
+      ],
+      "anchor": "error=0;",
+      "sha256": "8319ebffda908ae3db29386c7a18dcae5f8e32e07f06868340e340939795176b",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW06",
+      "priority": "P1_when_enabled",
+      "path": "soberup/upstream/user/cpu1_main.c",
+      "line_matches": [
+        14
+      ],
+      "anchor": "//route_progress_begin_frame();",
+      "sha256": "953f29b978a245491b19ef7e53fbc5c33c54d034f85a11551318c390d930b095",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW07",
+      "priority": "P1",
+      "path": "soberup/upstream/code/initialize.c",
+      "line_matches": [
+        68
+      ],
+      "anchor": "start_flag = 1;",
+      "sha256": "b27949ec6cf613f76fcf9625295aac7a812aa3412e4e5c429179c86b1e14077b",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW08",
+      "priority": "P1",
+      "path": "soberup/upstream/code/motor.c",
+      "line_matches": [
+        677
+      ],
+      "anchor": "system_delay_ms(500);",
+      "sha256": "2ce4694b10996a7394eb24cd9fccdab3e3b4892a1f357af029a92c24817c31e0",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW09",
+      "priority": "P2_when_reverse_required",
+      "path": "soberup/upstream/code/motor.c",
+      "line_matches": [
+        355,
+        385
+      ],
+      "anchor": "//    else if (pwm < 0)",
+      "sha256": "2ce4694b10996a7394eb24cd9fccdab3e3b4892a1f357af029a92c24817c31e0",
+      "status": "open_static_finding_not_runtime_reproduced"
+    },
+    {
+      "id": "SW10",
+      "priority": "P1_porting",
+      "path": "soberup/upstream/code/encoder.c",
+      "line_matches": [
+        44
+      ],
+      "anchor": "return (int)(filtered_L + 0.5f);",
+      "sha256": "2b15539a90943593b0045e035d74aabb68d9deb02113d4db730be93786eaeb13",
+      "status": "open_static_finding_not_runtime_reproduced"
+    }
+  ],
+  "source_inventory": [
+    {
+      "path": "soberup/upstream/user/cpu0_main.c",
+      "sha256": "3a648c01536deec99b7bfa7da8ddcbe7ad8cde5ed4562aeb896ac32e190a772e"
+    },
+    {
+      "path": "soberup/upstream/user/cpu1_main.c",
+      "sha256": "953f29b978a245491b19ef7e53fbc5c33c54d034f85a11551318c390d930b095"
+    },
+    {
+      "path": "soberup/upstream/user/isr.c",
+      "sha256": "34022ba6163724d92f5eaddc03ebc949bb8c9409c926b92835c71b439f449dc5"
+    },
+    {
+      "path": "soberup/upstream/code/initialize.c",
+      "sha256": "b27949ec6cf613f76fcf9625295aac7a812aa3412e4e5c429179c86b1e14077b"
+    },
+    {
+      "path": "soberup/upstream/code/image.c",
+      "sha256": "fda83e2c9bfeba14dfe9d77c85884417a80a7fc3bd4a3a2e65cac470a31f25b7"
+    },
+    {
+      "path": "soberup/upstream/code/dashedline_makeup.c",
+      "sha256": "eca52fbcb464df218dd6b7cb3d19719f32f86289517ed3495a24398c0d2a7767"
+    },
+    {
+      "path": "soberup/upstream/code/maze.c",
+      "sha256": "8c7135b3c8740d60224750f40c4f389b88e4563e32e5a5d57c26dd05a864508b"
+    },
+    {
+      "path": "soberup/upstream/code/maze.h",
+      "sha256": "7066f5cd6febb4172ea4cd261fc23890a95d82eb8e20e08559d2c62673cb9129"
+    },
+    {
+      "path": "soberup/upstream/code/element_line.c",
+      "sha256": "49a7026a1895cef1b49e755b0832e809bfad1b58d6a3436c66112e5768fea666"
+    },
+    {
+      "path": "soberup/upstream/code/line.c",
+      "sha256": "8319ebffda908ae3db29386c7a18dcae5f8e32e07f06868340e340939795176b"
+    },
+    {
+      "path": "soberup/upstream/code/state_control.c",
+      "sha256": "bee23672ac781e20b6908547087b67245afe28c2fcf99b3db611b2281090938b"
+    },
+    {
+      "path": "soberup/upstream/code/route_config.c",
+      "sha256": "dd4938484920a09b3b0ef8f66a8074881c8c7ea62699e2b12ed819674d990214"
+    },
+    {
+      "path": "soberup/upstream/code/route_config.h",
+      "sha256": "725fdd85ec5280f46ba7af94d6e2f37c24fe1c4a82e9c0788442bae83920bf34"
+    },
+    {
+      "path": "soberup/upstream/code/route_progress.c",
+      "sha256": "124ec825d692c2b7f2821a3750bceb0e48153aa4a64c094ad6ced4a7e6797832"
+    },
+    {
+      "path": "soberup/upstream/code/motor.c",
+      "sha256": "2ce4694b10996a7394eb24cd9fccdab3e3b4892a1f357af029a92c24817c31e0"
+    },
+    {
+      "path": "soberup/upstream/code/motor.h",
+      "sha256": "5eb004768e69ab398b139ac657a7e5a37c31d8d2deb187b62037208a4d2cbb23"
+    },
+    {
+      "path": "soberup/upstream/code/encoder.c",
+      "sha256": "2b15539a90943593b0045e035d74aabb68d9deb02113d4db730be93786eaeb13"
+    },
+    {
+      "path": "soberup/upstream/code/MahonyAHRS.c",
+      "sha256": "1cc8c1397d63371c8280c8fe6cc23d645690fdeafc7632eec0b4e6286664ae48"
+    },
+    {
+      "path": "soberup/upstream/code/inertial_navigation.c",
+      "sha256": "a865ffadd5d89d92f02c5db26a04045f1ff27f608c768ba97de3a783b742c0e8"
+    },
+    {
+      "path": "soberup/upstream/code/inertial_navigation.h",
+      "sha256": "1a922d73ad2d6952b95975bc199dfbda0d295a6a91cfebeedc84390e449f627c"
+    },
+    {
+      "path": "soberup/upstream/code/run_features.c",
+      "sha256": "0d82988275b2e012dc10b264ff9ce632f022c09b2dda6730de2715be3dfcf164"
+    },
+    {
+      "path": "soberup/upstream/code/menu/menu.c",
+      "sha256": "533c23888bf757f30e63463aaaacd3809c1a891ee9d34f5f38722b14e813a257"
+    },
+    {
+      "path": "soberup/upstream/code/menu/menu_pages.c",
+      "sha256": "519d17af23fcedaf205f6f0a1d540dc35695fadbb50f0a25c1530ccf2e0601db"
+    },
+    {
+      "path": "soberup/upstream/code/menu/menu_tree.c",
+      "sha256": "91be49e223dbbc6200bea56d4f6ff72e1793ab84510fe690bdb8e98d6a6ba522"
+    },
+    {
+      "path": "soberup/upstream/code/menu/menu_params.c",
+      "sha256": "17aa3b986488433be8432c34a897dc764eb7673a8fcf4e43520951f90c68f1e3"
+    },
+    {
+      "path": "soberup/upstream/libraries/zf_device/zf_device_mt9v03x.c",
+      "sha256": "d1205535d83739378f456e295731d3f4cc146adfa2daba439a287d6a3d9e6a57"
+    },
+    {
+      "path": "soberup/upstream/libraries/zf_device/zf_device_mt9v03x.h",
+      "sha256": "1d8906214bc8233a54cd47ca0638ea642bafa03b3f8f3808659f9100e1a238c1"
+    },
+    {
+      "path": "soberup/upstream/libraries/zf_driver/zf_driver_timer.c",
+      "sha256": "50271456e149b37b7a11b7547393fb1041c4bded32c14b1a7e8db0f6aee39d60"
+    },
+    {
+      "path": "soberup/upstream/libraries/zf_device/zf_device_wireless_uart.c",
+      "sha256": "20e499d3edc4d3323d07c426e21b69017c0bd84ba72ba291522d88ee0e74e614"
+    }
+  ],
+  "non_upstream_build_and_run_artifacts_found": [],
+  "execution": {
+    "ads_build": "NOT_EXECUTED",
+    "host_algorithm_tests": "NOT_IMPLEMENTED_IN_WORKSPACE",
+    "hardware_tests": "NOT_EXECUTED",
+    "webots_simulation": "NOT_IMPLEMENTED_IN_WORKSPACE"
+  },
+  "nonrequirements": [
+    "onboard component-name classifier",
+    "onboard score calculator",
+    "online optimal planner",
+    "dedicated visual start detector",
+    "reverse wheel capability unless chosen route/task requires it"
+  ],
+  "resource_partial_estimate_bytes": {
+    "capture": 22560,
+    "binary": 22560,
+    "trajectory": 24576,
+    "four_300_point_arrays": 9600,
+    "subtotal": 79296,
+    "with_additional_frame": 101856,
+    "algorithm_budget": 98304,
+    "excess_before_other_objects_if_snapshot_added": 3552
+  },
+  "resource_assumptions": [
+    "32-bit int; Point is 8 bytes",
+    "trajectory point is 8 bytes",
+    "partial estimate only; linker elimination and placement not verified"
+  ],
+  "report": "docs/assessment/2026-11-14-software-compliance-audit.md"
+}
