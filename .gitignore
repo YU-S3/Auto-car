@@ -1,0 +1,17 @@
+# Local Python environments and generated caches
+/.venv/
+__pycache__/
+*.py[cod]
+
+# Local build output
+/build/
+/host/build/
+
+# Local credentials
+/.env
+/.env.*
+!/.env.example
+
+# Desktop metadata
+.DS_Store
+Thumbs.db

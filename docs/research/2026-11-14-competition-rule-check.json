@@ -1,0 +1,72 @@
+{
+  "checked_on": "2026-11-14",
+  "competition_year": 2026,
+  "scope": "Wenjie Cup visual crazy-circuit category; documentation and static source assessment only",
+  "primary_rules": {
+    "path": "docs\\“文杰杯”智能车挑战赛宣讲会5.24(1).pptx",
+    "sha256": "64b25b493948ab82a3cff0a2acdea59be35b8861ea959a73c7f79f96e4b95d3f",
+    "slides": [
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "formula_image": "docs/research/ppt-assets/image22.png"
+  },
+  "user_confirmation": {
+    "date": "2026-11-14",
+    "rules_unchanged": true,
+    "answer": "无调整",
+    "exact_final_date_provided": false
+  },
+  "public_sources": [
+    {
+      "url": "https://sie.ecnu.edu.cn/_s542/zytz/list.psp",
+      "status": "read",
+      "observed": "Official ECNU notice list links the May 24 briefing; displayed publication date 2026-05-13"
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/8Ax9JtD6aXCbHMblgclkdg",
+      "status": "linked_by_official_list_but_body_unavailable",
+      "observed": "Browser retrieval returned non-retryable open error"
+    }
+  ],
+  "search_scope": "Public web searches for 2026 Wenjie intelligent-car rules, final and crazy-circuit category plus the official notice list; no more complete rules attachment obtained in inspected results; this is not a claim of universal absence.",
+  "rules": {
+    "subjects": 3,
+    "minimum_effective_components_per_subject": 2,
+    "must_return_to_departure_area": true,
+    "score_formula": "T=T1+T2+30*(M-N)",
+    "incomplete_subject_score_seconds": 278,
+    "incomplete_score_is_runtime_timeout": false,
+    "omitted_components_allowed_with_penalty": true,
+    "effective_count_authority": "external infrared judge, not onboard software"
+  },
+  "unresolved_execution_details": [
+    "Exact start/finish trigger",
+    "Weight-to-time conversion",
+    "Preloaded route permission",
+    "Encoder/IMU use boundary",
+    "Operational timeout",
+    "Precise final date"
+  ],
+  "source_snapshot": {
+    "commit": "7abfdac0d0156576ba5186716a7c1e42992359ca",
+    "root_tree": "0a17400d274d55768758f326566368ad1c4b23c6",
+    "files": 707,
+    "modification_allowed": false
+  },
+  "workspace_non_upstream_artifacts_found": [],
+  "validation_limits": [
+    "No ADS build",
+    "No external firmware execution",
+    "No physical hardware test",
+    "No completion claim"
+  ],
+  "deliverables": [
+    "docs/architecture/system-architecture.md",
+    "docs/adr/0001-tc264-shared-c-baseline.md",
+    "docs/assessment/2026-11-14-finish-readiness.md"
+  ]
+}

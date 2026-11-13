@@ -1,0 +1,262 @@
+{
+  "selection_date": "2026-11-13",
+  "commit": "7abfdac0d0156576ba5186716a7c1e42992359ca",
+  "status": "downloaded_verified_not_ported",
+  "upstream_directory": "upstream",
+  "upstream_sdk_version_file": "V3.4.1",
+  "future_official_sdk_reference": "V3.4.6 @ 9adccd9caa536ce6bfb5deea4107e186c65c77b9",
+  "groups": [
+    {
+      "name": "priority_algorithm_port",
+      "adaptation_note": "Port behind explicit image, geometry, and configuration interfaces; validate with local images.",
+      "files": [
+        {
+          "path": "code/image.c",
+          "bytes": 24931,
+          "git_blob_sha1": "81cc173243603be118d296aa68a2af33ea03b8cc",
+          "sha256": "fda83e2c9bfeba14dfe9d77c85884417a80a7fc3bd4a3a2e65cac470a31f25b7"
+        },
+        {
+          "path": "code/image.h",
+          "bytes": 355,
+          "git_blob_sha1": "0ef608ae4b22a0c130f199a86aa3ce14fe68ab06",
+          "sha256": "a4ee66aa3a8cf00af2b53a62a66f5419d15f309d1e0fc6bdc1a63d24de0f4fdc"
+        },
+        {
+          "path": "code/maze.c",
+          "bytes": 27344,
+          "git_blob_sha1": "e4516a5a85cedeb29f9996ca327bf31bda549143",
+          "sha256": "8c7135b3c8740d60224750f40c4f389b88e4563e32e5a5d57c26dd05a864508b"
+        },
+        {
+          "path": "code/maze.h",
+          "bytes": 2488,
+          "git_blob_sha1": "de8bd7ed6b121bf9cee5e9d42af5fe6a7c80dde3",
+          "sha256": "7066f5cd6febb4172ea4cd261fc23890a95d82eb8e20e08559d2c62673cb9129"
+        },
+        {
+          "path": "code/tool.c",
+          "bytes": 13463,
+          "git_blob_sha1": "aa5dab946f339e1ee17f7672a7aa3baff067e642",
+          "sha256": "6e44e1f22b2014eb152e253138369e37f613d6ba30d435cdfefbf2c75929fdff"
+        },
+        {
+          "path": "code/tool.h",
+          "bytes": 2598,
+          "git_blob_sha1": "09049485de946801d4f3d20f92c3dd2ed17f8283",
+          "sha256": "f1e706dc9954d00518940d6ae86cf3072f84c81df239c0c492baf68fa9248cfa"
+        },
+        {
+          "path": "code/element_line.c",
+          "bytes": 18448,
+          "git_blob_sha1": "da1b72617038e617754378673055377bfd67e194",
+          "sha256": "49a7026a1895cef1b49e755b0832e809bfad1b58d6a3436c66112e5768fea666"
+        },
+        {
+          "path": "code/element_line.h",
+          "bytes": 1043,
+          "git_blob_sha1": "572e9cb7f944012d0a5e49ff9096cff76123589c",
+          "sha256": "07c55dd643f71b12295b647279bedc38c050c5948e9a512d69920733667e3335"
+        },
+        {
+          "path": "code/dashedline_makeup.c",
+          "bytes": 4800,
+          "git_blob_sha1": "2785511bedadafd102ac06e4e2ed5d0aec63c58d",
+          "sha256": "eca52fbcb464df218dd6b7cb3d19719f32f86289517ed3495a24398c0d2a7767"
+        },
+        {
+          "path": "code/dashedline_makeup.h",
+          "bytes": 1026,
+          "git_blob_sha1": "8e4844739eb0da49acb7aef1acd3ae8ddb631749",
+          "sha256": "9923226032b502b13ca2eb44973862c8e56c001f0a4d0d2c869a19abe72e9874"
+        },
+        {
+          "path": "code/line.c",
+          "bytes": 11654,
+          "git_blob_sha1": "628f2e51486d26014bea1a2ee3d1c19fe4c3b231",
+          "sha256": "8319ebffda908ae3db29386c7a18dcae5f8e32e07f06868340e340939795176b"
+        },
+        {
+          "path": "code/line.h",
+          "bytes": 439,
+          "git_blob_sha1": "189c0e1ba8762a1a725db7c6a762cd59f88c5057",
+          "sha256": "93a495ab221c2759b98f0355bbfd76099c4288b6b5118d9f69fcf1acce42c625"
+        }
+      ]
+    },
+    {
+      "name": "navigation_adapt",
+      "adaptation_note": "Replace route tables, event timing, and device feedback with this vehicle configuration.",
+      "files": [
+        {
+          "path": "code/state_control.c",
+          "bytes": 17804,
+          "git_blob_sha1": "c1e2d6998f71263326a1ce7f5ad3fabd3f047d2d",
+          "sha256": "bee23672ac781e20b6908547087b67245afe28c2fcf99b3db611b2281090938b"
+        },
+        {
+          "path": "code/state_control.h",
+          "bytes": 742,
+          "git_blob_sha1": "93fa738bfde10cd291b56cef7868b7d14b337035",
+          "sha256": "b4ab610e363a5f68573c2bf8cb8c50bb3b3dd68a23dc1e5b5144cb10108aba15"
+        },
+        {
+          "path": "code/route_config.c",
+          "bytes": 15446,
+          "git_blob_sha1": "ae262f15aab83d909cb0d08512a2c0906fe46703",
+          "sha256": "dd4938484920a09b3b0ef8f66a8074881c8c7ea62699e2b12ed819674d990214"
+        },
+        {
+          "path": "code/route_config.h",
+          "bytes": 2466,
+          "git_blob_sha1": "05dfa6318c3ff2678d3cd509565a01f482bf679a",
+          "sha256": "725fdd85ec5280f46ba7af94d6e2f37c24fe1c4a82e9c0788442bae83920bf34"
+        },
+        {
+          "path": "code/route_progress.c",
+          "bytes": 16215,
+          "git_blob_sha1": "0b6c2c8b87156e074c4f2ca3b8c1f74a5a99a2f4",
+          "sha256": "124ec825d692c2b7f2821a3750bceb0e48153aa4a64c094ad6ced4a7e6797832"
+        },
+        {
+          "path": "code/route_progress.h",
+          "bytes": 2653,
+          "git_blob_sha1": "d47a9563e9cea33b88a674101bd6eeb336934538",
+          "sha256": "1961762d10b764bb912089e5f3c4dcaff3fef9dd1442d22eb31c7d50bf0dc2ca"
+        },
+        {
+          "path": "code/map_event.c",
+          "bytes": 6181,
+          "git_blob_sha1": "f5488c504e9a5a4784f245bb237a00a50a525d82",
+          "sha256": "1c57dd69c3401372db21c21ed8118b315d9e897cd7e1c95b17a2b4bc792a36c2"
+        },
+        {
+          "path": "code/map_event.h",
+          "bytes": 2818,
+          "git_blob_sha1": "d09b2af2f508bdf29365159863f7a2cf3c2985de",
+          "sha256": "993c9a1fd76e0b46213f5f63f3bf48f6e29550afe2f1ca34d6758b3023a6b914"
+        },
+        {
+          "path": "code/trajectory_policy.c",
+          "bytes": 2163,
+          "git_blob_sha1": "2039edca51abb45636539ac789396019d4b727ec",
+          "sha256": "4d4285a066115eba415cc25605b61be2f774c4748c87304b377828bbb9ee9bcf"
+        },
+        {
+          "path": "code/trajectory_policy.h",
+          "bytes": 783,
+          "git_blob_sha1": "40a47daa5878e64a71c617cc349e1a64312c0656",
+          "sha256": "60a397fdfc05059c9f23a6fc2ad83004b1b6f09e5786433ff3d3fa634a225be3"
+        },
+        {
+          "path": "code/run_features.c",
+          "bytes": 935,
+          "git_blob_sha1": "d80dd13790c2f88da7b4c20ad8a1797d63ac0334",
+          "sha256": "0d82988275b2e012dc10b264ff9ce632f022c09b2dda6730de2715be3dfcf164"
+        },
+        {
+          "path": "code/run_features.h",
+          "bytes": 492,
+          "git_blob_sha1": "31921b7c5b9f2f436fef60d2464c8e09394f82a1",
+          "sha256": "5f5b87b7c7096f2590e76333bd2f2d7348ccc0ae310b6c048cdf676f8e2ea1cb"
+        },
+        {
+          "path": "code/tuning_presets.c",
+          "bytes": 8089,
+          "git_blob_sha1": "78e8e4db79988533a0cb18782d218cd716f17371",
+          "sha256": "761fcd1a13cc987c191e004bb4207cc839040928d6aaaf498d8cd52aaada36a4"
+        },
+        {
+          "path": "code/tuning_presets.h",
+          "bytes": 1166,
+          "git_blob_sha1": "97cb49daf32f61b95baa1c61af2866323ac2ce35",
+          "sha256": "95f92375e5efef21c1c83d7fd58b17e1a228e6b62d9fae065c7f963e1b6d8b67"
+        }
+      ]
+    },
+    {
+      "name": "control_reference",
+      "adaptation_note": "Recalibrate 130 motors, signed wheel feedback, units, intervals, saturation, and pins.",
+      "files": [
+        {
+          "path": "code/motor.c",
+          "bytes": 21736,
+          "git_blob_sha1": "74a0eba53ca590ed4c5c68cdd38f790cb3d66473",
+          "sha256": "2ce4694b10996a7394eb24cd9fccdab3e3b4892a1f357af029a92c24817c31e0"
+        },
+        {
+          "path": "code/motor.h",
+          "bytes": 3002,
+          "git_blob_sha1": "19bb315d993ffe90fb0caa0ccca765b613dd3027",
+          "sha256": "5eb004768e69ab398b139ac657a7e5a37c31d8d2deb187b62037208a4d2cbb23"
+        },
+        {
+          "path": "code/encoder.c",
+          "bytes": 2614,
+          "git_blob_sha1": "07db941805d04c1107de375df715c16e7e243516",
+          "sha256": "2b15539a90943593b0045e035d74aabb68d9deb02113d4db730be93786eaeb13"
+        },
+        {
+          "path": "code/encoder.h",
+          "bytes": 534,
+          "git_blob_sha1": "71e5b78d3e68973670f4ce6649165b0c33dc2620",
+          "sha256": "972d37e92a5c7f5de2b6725c6ef02ef5cfa876575939ad6a8b797deed9f5b2bf"
+        },
+        {
+          "path": "code/ADRC.c",
+          "bytes": 1818,
+          "git_blob_sha1": "d8e7db315babfe339f0699e7e12fd88c09a0e34d",
+          "sha256": "faa4790ed5abfc57b36c3843a37e71fecff42c69eceae4f70b432ab47e790d45"
+        },
+        {
+          "path": "code/ADRC.h",
+          "bytes": 1371,
+          "git_blob_sha1": "74848f51ba676efbf4d34cb87ca39df5dcab34b6",
+          "sha256": "4df44c7a0ed376c07c207686b5585e440555905e9719833e9a2eebb0bceca56f"
+        }
+      ]
+    },
+    {
+      "name": "hardware_reference_only",
+      "adaptation_note": "Do not import RC drivers, old calibration, trajectory memory, or initialization unchanged.",
+      "files": [
+        {
+          "path": "code/MahonyAHRS.c",
+          "bytes": 10439,
+          "git_blob_sha1": "d7b6f4ce4d71dd69987c2f413a3edf90b1ab8530",
+          "sha256": "1cc8c1397d63371c8280c8fe6cc23d645690fdeafc7632eec0b4e6286664ae48"
+        },
+        {
+          "path": "code/MahonyAHRS.h",
+          "bytes": 1441,
+          "git_blob_sha1": "dd5bb8913f5fe5406f446145007cd6ee74af435e",
+          "sha256": "fc72e7af3499c1db6a923bc61deb2772fbd0c4df8affd795e01ff7c0dd4ace2a"
+        },
+        {
+          "path": "code/initialize.c",
+          "bytes": 3401,
+          "git_blob_sha1": "6609ad79f33e5f6c5fcfb7f661faea853758bf0c",
+          "sha256": "b27949ec6cf613f76fcf9625295aac7a812aa3412e4e5c429179c86b1e14077b"
+        },
+        {
+          "path": "code/initialize.h",
+          "bytes": 141,
+          "git_blob_sha1": "201514e54d0b6d8696438fa1c85d47e13fc55c31",
+          "sha256": "8c8c150802ce8da04d257294b3d497b48c1d69ce48f81728726c7361285a0027"
+        },
+        {
+          "path": "code/inertial_navigation.c",
+          "bytes": 26697,
+          "git_blob_sha1": "ef8997a57b3bfde4e82cf40383bbd90939678c5e",
+          "sha256": "a865ffadd5d89d92f02c5db26a04045f1ff27f608c768ba97de3a783b742c0e8"
+        },
+        {
+          "path": "code/inertial_navigation.h",
+          "bytes": 2325,
+          "git_blob_sha1": "3f275fe89de8b8339e6ed69345d19102a10386a8",
+          "sha256": "1a922d73ad2d6952b95975bc199dfbda0d295a6a91cfebeedc84390e449f627c"
+        }
+      ]
+    }
+  ]
+}

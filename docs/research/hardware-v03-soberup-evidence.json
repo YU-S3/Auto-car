@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-13",
+  "files": [
+    {
+      "url": "https://github.com/Mantou-WYH/soberup-2026-public/blob/main/code/MahonyAHRS.c",
+      "lines": [
+        {
+          "line": 2,
+          "text": "#include \"zf_device_imu660rc.h\""
+        },
+        {
+          "line": 18,
+          "text": "#define IMU_SAMPLE_PERIOD_S (0.002f)"
+        },
+        {
+          "line": 58,
+          "text": "        imu660rc_get_gyro(); // 读取 IMU660RC 陀螺仪原始数据"
+        },
+        {
+          "line": 61,
+          "text": "        sum_x += imu660rc_gyro_transition(imu660rc_gyro_x);"
+        },
+        {
+          "line": 62,
+          "text": "        sum_y += imu660rc_gyro_transition(imu660rc_gyro_y);"
+        },
+        {
+          "line": 63,
+          "text": "        sum_z += imu660rc_gyro_transition(imu660rc_gyro_z);"
+        },
+        {
+          "line": 139,
+          "text": "        0.5f * (previous_gyro_z_dps + gyro_z_dps) * IMU_SAMPLE_PERIOD_S;"
+        },
+        {
+          "line": 150,
+          "text": "    imu660rc_get_gyro();"
+        },
+        {
+          "line": 151,
+          "text": "    imu660rc_get_acc();"
+        },
+        {
+          "line": 154,
+          "text": "    imu_data.acc_x = imu660rc_acc_transition(imu660rc_acc_x);"
+        },
+        {
+          "line": 155,
+          "text": "    imu_data.acc_y = imu660rc_acc_transition(imu660rc_acc_y);"
+        },
+        {
+          "line": 156,
+          "text": "    imu_data.acc_z = -imu660rc_acc_transition(imu660rc_acc_z);"
+        },
+        {
+          "line": 159,
+          "text": "    float gyro_x_dps = imu660rc_gyro_transition(imu660rc_gyro_x) - gyro_offset_x;"
+        },
+        {
+          "line": 160,
+          "text": "    float gyro_y_dps = imu660rc_gyro_transition(imu660rc_gyro_y) - gyro_offset_y;"
+        },
+        {
+          "line": 161,
+          "text": "    float gyro_z_dps = imu660rc_gyro_transition(imu660rc_gyro_z) - gyro_offset_z;"
+        },
+        {
+          "line": 301,
+          "text": "    imu660rc_init(IMU660RC_QUARTERNION_DISABLE);"
+        },
+        {
+          "line": 321,
+          "text": "    imu660rc_get_acc();"
+        },
+        {
+          "line": 322,
+          "text": "    float init_ax = imu660rc_acc_transition(imu660rc_acc_x);"
+        },
+        {
+          "line": 323,
+          "text": "    float init_ay = imu660rc_acc_transition(imu660rc_acc_y);"
+        },
+        {
+          "line": 324,
+          "text": "    float init_az = -imu660rc_acc_transition(imu660rc_acc_z);"
+        },
+        {
+          "line": 352,
+          "text": "void imu660rc_init_main(){"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Mantou-WYH/soberup-2026-public/blob/main/code/motor.h",
+      "lines": [
+        {
+          "line": 33,
+          "text": "#define DIR_R1             (P33_9)"
+        },
+        {
+          "line": 34,
+          "text": "#define PWM_R1              (ATOM3_CH0_P33_10)"
+        },
+        {
+          "line": 35,
+          "text": "#define DIR_L1               (P33_11)"
+        },
+        {
+          "line": 36,
+          "text": "#define PWM_L1              (ATOM3_CH4_P33_12)"
+        },
+        {
+          "line": 39,
+          "text": "// NSLEEP 电机驱动休眠控制引脚"
+        },
+        {
+          "line": 40,
+          "text": "#define NSLEEP_PIN          (P33_6)     // NSLEEP 输出：高电平唤醒，低电平休眠"
+        },
+        {
+          "line": 41,
+          "text": "#define NSLEEP_KEY          (P33_7)     // NSLEEP 按键输入：按下可关断 NSLEEP"
+        },
+        {
+          "line": 77,
+          "text": "// NSLEEP 控制函数"
+        },
+        {
+          "line": 78,
+          "text": "void NSLEEP_Init(void);         // 初始化 NSLEEP 引脚（默认唤醒）"
+        },
+        {
+          "line": 79,
+          "text": "void NSLEEP_Wake(void);         // 唤醒电机驱动"
+        },
+        {
+          "line": 80,
+          "text": "void NSLEEP_Sleep(void);        // 休眠电机驱动"
+        },
+        {
+          "line": 81,
+          "text": "void NSLEEP_ClearFault(void);   // 脉冲 NSLEEP 清除故障"
+        },
+        {
+          "line": 82,
+          "text": "void NSLEEP_Key_Handle(void);   // 检测按键并关断 NSLEEP"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Mantou-WYH/soberup-2026-public/blob/main/code/encoder.c",
+      "lines": [
+        {
+          "line": 10,
+          "text": "    encoder_dir_init(ENCODER_1, ENCODER_1_A, ENCODER_1_B);"
+        },
+        {
+          "line": 11,
+          "text": "    encoder_dir_init(ENCODER_2, ENCODER_2_A, ENCODER_2_B);"
+        },
+        {
+          "line": 19,
+          "text": "#define ENCODER_SPIKE_THRESHOLD 300"
+        },
+        {
+          "line": 29,
+          "text": "    int raw = (int)encoder_get_count(ENCODER_1);"
+        },
+        {
+          "line": 30,
+          "text": "    encoder_clear_count(ENCODER_1);"
+        },
+        {
+          "line": 34,
+          "text": "    if (abs(raw - last_raw) > ENCODER_SPIKE_THRESHOLD) {"
+        },
+        {
+          "line": 44,
+          "text": "    return (int)(filtered_L + 0.5f);"
+        },
+        {
+          "line": 55,
+          "text": "    int raw = (int)encoder_get_count(ENCODER_2);"
+        },
+        {
+          "line": 56,
+          "text": "    encoder_clear_count(ENCODER_2);"
+        },
+        {
+          "line": 59,
+          "text": "    if (abs(raw - last_raw) > ENCODER_SPIKE_THRESHOLD) {"
+        },
+        {
+          "line": 69,
+          "text": "    return (int)(filtered_R + 0.5f);"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Mantou-WYH/soberup-2026-public/blob/main/code/initialize.c",
+      "lines": [
+        {
+          "line": 23,
+          "text": "    NSLEEP_Init();"
+        },
+        {
+          "line": 27,
+          "text": "    imu660rc_init_main();"
+        }
+      ]
+    }
+  ]
+}

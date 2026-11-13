@@ -1,0 +1,21 @@
+# Build output
+Debug/
+Release/
+build/
+*.o
+*.d
+*.src
+*.elf
+*.bin
+*.hex
+*.map
+
+# Local IDE and assistant state
+.ads/
+.claude/
+
+# Local copies and runtime material
+*.bak
+record/
+__pycache__/
+*.py[cod]

@@ -1,0 +1,7 @@
+# Preserve the exact bytes of the pinned upstream snapshot on every platform.
+soberup/upstream/** -text
+
+*.pptx binary
+*.png binary
+*.gif binary
+*.GIF binary
