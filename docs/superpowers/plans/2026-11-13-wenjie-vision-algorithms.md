@@ -4,6 +4,8 @@
 
 **Architecture:** 厂商 BSP 负责采集和执行，C 语言算法核心负责视觉、事件、状态机、路线及控制。PC 端负责数据回放和规划对照；比赛运行不依赖 PC。输入图像、输出控制指令及日志使用明确的时间戳和有效性标记。
 
+2026-11-14分工与范围更新：当前领取任务以[改进准备计划](2026-11-14-algorithm-hardware-improvement-plan.md)及[职责/接口设计](../specs/2026-11-14-algorithm-hardware-worksplit-design.md)为准；旧拟建目录、工期和细粒度任务保留为历史参考。算法统一使用`src/core/`与`host/`，板级接入使用`src/platform/tc264/`；不将元件名称/唯一ID、车端计分或在线最优规划列为最低完赛强制条件，国赛75%另按其适用范围验收。
+
 **Tech Stack:** TC264_BTB/TC264D、MT9V034 188×120、130双电机差速、DRV8701E、双编码器、IMU660RB、IPS114；ADS与逐飞TC264库，C99/C11兼容子集；PC端Python/NumPy/OpenCV/pytest，NetworkX仅作规划对照。纯C核心在PC与MCU共用，首版不引入RTOS。
 
 **文档日期：** 2026-11-13，已按硬件v0.3更新。**状态：** 方案已获用户认可；[Soberup源码基线](../../../soberup/README.md)已下载并校验，本车主应用和回放工具尚未实现。下文计划新增的应用文件和命令仍需逐项实现。板级适配先执行[TC264补充计划](2026-11-13-tc264-v03-porting-plan.md)，硬件型号和保守资源预算见[硬件型号文档](../../hardware-components.md)，官方接口和待标定项见[硬件开发核验](../../hardware-profile.md)。

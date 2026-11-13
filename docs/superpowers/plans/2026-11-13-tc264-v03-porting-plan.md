@@ -1,5 +1,7 @@
 # TC264_BTB硬件v0.3适配补充计划
 
+2026-11-14分工更新：后续职责、路径和工作包以[算法/硬件接入分工](../specs/2026-11-14-algorithm-hardware-worksplit-design.md)及[改进准备计划](2026-11-14-algorithm-hardware-improvement-plan.md)为准；共享算法统一在`src/core/`，板级适配在`src/platform/tc264/`，PC在`host/`。本文`firmware/app/`、`tools/host/`为旧拟建路径，不再并行创建。元件语义ID和在线规划不作为规则强制模块，覆盖门槛按适用阶段验证。
+
 日期：2026-11-13。目标：在逐飞官方TC264工程上接入可由PC和MCU共用的C99/C11兼容算法核心。本文补充并优先约束[原赛题实现计划](2026-11-13-wenjie-vision-algorithms.md)，不重做已确定的赛题任务。
 
 依据：[硬件型号与保守资源](../../hardware-components.md)、[硬件开发核验](../../hardware-profile.md)、[第二轮仓库筛选](../../research/2026-11-13-tc264-v03-repository-selection.md)。方案已获认可，[Soberup main源码基线](../../../soberup/README.md)已经下载并验证，未修改上游。以下应用适配路径和测试仍是后续实施内容。

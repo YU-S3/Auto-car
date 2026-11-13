@@ -2,6 +2,9 @@
 
 2026-11-14新增：
 
+- [算法/硬件接入分工设计](superpowers/specs/2026-11-14-algorithm-hardware-worksplit-design.md)：按规则行为划分主责、现有模块复用范围、统一目录、跨侧数据契约和交接责任。
+- [改进准备工作包](superpowers/plans/2026-11-14-algorithm-hardware-improvement-plan.md)：共同先行C0/C1、算法A0—A5、接入B0—B5，以及SW01—SW10负责人、依赖与M0—M4联合验收。第一批先做接口/PC回放与引脚/ADS/停机。
+
 - [软件专项达标检查](assessment/2026-11-14-software-compliance-audit.md)：规则行为与源码逐项对应，列出10项软件问题；明确不以缺元件分类器、在线规划器或车端计分模块直接判违规。软件当前不能通过本车就绪验收。
 
 - [第21届疯狂电路组规则补充基线](research/2026-11-14-national21-rule-baseline.md)：依用户补充核对全国总规则、赛道细则、问答和后期计分；区分校赛三科、全国单科、国赛75%，补齐IMU、重量、禁入边界与自制电路资格。
